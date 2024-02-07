@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>coffee shop</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">COFFEE</a>
+            <ul class="menu-links">
+                <span id="close-menu-btn" class="material-symbols-outlined">X</span>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+            <span id="menu-btn" class="material-symbols-outlined">☰</span>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="content">
+
+            <h1>Start Your Day with Fresh Coffee</h1>
+            <p>
+                Ethiopian coffee, originating from Arabica and Robusta, 
+                is a global phenomenon known for its origin, 
+                brewing techniques, health benefits, morning rituals, 
+                and fair practices.
+            </p>
+            <button>Order Now</button>
+        </div>
+    </section>
+
+    <script>
+        const header = document.querySelector("header");
+        const menuBtn = document.querySelector("#menu-btn");
+        const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+        menuBtn.addEventListener("click", () => {
+            header.classList.toggle("show-mobile-menu");
+        });
+
+        closeMenuBtn.addEventListener("click", () => {
+            header.classList.remove("show-mobile-menu");
+        });
+    </script>
+
+</body>
+
+</html>
